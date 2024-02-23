@@ -71,3 +71,16 @@ homomorphic encryption schemes have to be malleable because we allow the computa
 Malleability is a requisite characteristic of HE schemes, enabling them to support computations on encrypted data. This controlled malleability is what distinguishes HE from other encryption paradigms and is key to its utility in secure data processing and analysis applications. However, it's important to differentiate this functional malleability from the uncontrolled malleability that might be exploited in traditional encryption schemes. In HE, the malleability is a feature that enables computation while still aiming to maintain the confidentiality and integrity of the data.
 
 Any malleable encryption scheme cannot be secure against adaptive chosen-ciphertext attacks
+
+
+The Learning with Errors (LWE) problem is a fundamental mathematical concept widely used in cryptography to create secure encryption algorithms1. Let’s dive into the details:
+
+Definition:
+In LWE, secret information is represented as a set of equations with errors. Essentially, it’s a way to hide the value of a secret by introducing noise to it.
+More technically, LWE involves inferring a linear function over a finite ring from given samples, some of which may be erroneous.
+Here’s how it works:
+- Let’s denote the ring of integers modulo (q) as (\mathbb{Z}_q), and let (\mathbf{s}) be an unknown linear function.
+- The input to the LWE problem consists of pairs ((\mathbf{a}, t)), where (\mathbf{a}) is a vector chosen uniformly from (\mathbb{Z}_q^n), and (t = \langle \mathbf{a}, \mathbf{s} \rangle / q + e).
+- The deviation from the equality is determined by a known noise model.
+- The goal is to find the function (\mathbf{s}) (or a close approximation) with high probability.
+
