@@ -1,4 +1,4 @@
-# Your name (Date)
+# Haowen (22-02-2024)
 
 # Paper information
 
@@ -28,8 +28,6 @@ Identifies the challenge of key management in federated learning systems and pro
 The paper assumes that the key generation center, the cloud server, and the computation provider are trusted and honest, which may not be realistic in some scenarios. The paper also does not compare the proposed algorithm with other existing privacy-preserving federated learning methods, such as differential privacy or secure multiparty computation. The paper also does not discuss the impact of the proposed algorithm on the learning accuracy and convergence rate of the federated learning model.
 
 
-Totally unfeasible and inscalable.
-
 ## Paper presentation
 
 (This section is optional, only fill it when there's something special about it)
@@ -42,3 +40,19 @@ The paper could be improved by relaxing some of the assumptions on the trustwort
 ## Takeaways and questions
 (What did you like/dislike about the paper? What did your learn?)
 (Questions for discussion?)
+
+This paper proposes a privacy-preserving federated learning algorithm that uses a distributed homomorphic cryptosystem to allow each client to use a different homomorphic encryption (HE) key in the same system1. Here is a brief explanation of how it works:
+- Homomorphic encryption is a technique that allows arithmetic operations to be performed on encrypted data without decrypting them23. For example, if A and B are encrypted values, then HE can compute A + B or A * B without revealing the original values of A and B.
+- Distributed homomorphic cryptosystem is a scheme that splits a private key into several partial private keys and distributes them to multiple servers4. This way, no single server can decrypt the encrypted data by itself, but they can cooperate to perform homomorphic operations and decryption.
+- Privacy-preserving federated learning is a method that enables multiple clients to train a machine learning model collaboratively without sharing their local data5. Instead, they only share their local model parameters, which are encrypted with their own HE keys.
+
+The paper’s algorithm works as follows:
+- Each client generates its own public-private HE key pair and sends the public key to the central server and the computation provider. The private key is split into two partial private keys and distributed to the server and the provider.
+- The server sends the global model parameters, encrypted with each client’s public key, to the clients6. The clients decrypt them with their private keys and train their local models with their local data7. Then, they encrypt their local model parameters with their public keys and send them back to the server.
+- The server adds a random noise, encrypted with each client’s public key, to the encrypted local model parameters and partially decrypts them with its partial private key9. Then, it sends the partially decrypted values to the provider.
+- The provider performs the final decryption with its partial private key and obtains the sum of the local model parameters and the random noise. Then, it calculates the average of the sum and encrypts it with each client’s public key. It sends the encrypted average to the server.
+- The server removes the random noise from the encrypted average by using homomorphic subtraction and obtains the encrypted global model parameters8. It sends them to the clients for the next iteration.
+
+By using this algorithm, the paper achieves the following advantages:
+- Stronger privacy protection: Each client uses a different HE key, so even if one client’s key is compromised, the other clients’ data are still secure. Moreover, the server and the provider cannot access the clients’ data or model parameters without their cooperation.
+- Higher flexibility: The clients can use different HE keys in the same system, so they do not need to agree on a common key or exchange keys with each other. This reduces the communication and coordination overhead.
