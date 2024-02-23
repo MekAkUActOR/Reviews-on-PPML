@@ -1,4 +1,4 @@
-# Haowen (Date)
+# Haowen (21-02-2024)
 
 # Paper information
 (Please use comma as a separator for authors)
@@ -8,20 +8,27 @@
 - Title: Learning Without Knowing: Applying Homomorphic Encryption to Machine Learning Algorithms
 - Authors: Yao
 - Venue: Thesis
-- Keywords: 
+- Keywords: Homomorphic Encryption, Machine Learning, Security Proof
 
 # Paper content
 ## Summary
-(What is the problem the paper is trying to solve?)
-(What are the key ideas and insights of the paper?)
-(What are the key mechanisms and contributions?)
-(What are the key conclusions?)
+### Overview
+This thesis delves into the exploration of homomorphic encryption schemes and their application to machine learning algorithms. It provides a comprehensive survey of the literature surrounding homomorphic encryption, presenting the theory behind it and examining its application through various machine learning algorithms.
+
+### Methodology
+The thesis covers the Paillier cryptosystem and the fully homomorphic encryption scheme based on the Learning with Errors (LWE) problem. It includes a detailed exploration of how these encryption schemes can be applied to fundamental machine learning algorithms such as Fisher's Linear Discriminant, Linear Regression, Principal Component Analysis, Decision Trees, and Naive Bayes Classifiers. The study also discusses the necessity of approximating certain calculations due to the limitations of somewhat homomorphic encryption schemes.
+
+### Results & Discussions
+Yao discusses the limitations of fully homomorphic encryption, including its security, efficiency, and societal impact. The thesis acknowledges that while homomorphic encryption offers significant advantages, it is not without its challenges. Alternatives to homomorphic encryption, such as Yao's garbled circuits and functional encryption, are surveyed to understand the situations in which homomorphic or fully homomorphic encryption is most advantageous.
+
+### Research Gap or Area of Improvement
+The thesis identifies that despite the progress in homomorphic encryption, there are still considerable challenges to overcome, especially regarding the efficiency and practical application of these encryption schemes in real-world scenarios.
 
 ## Strengths
-(Please evaluate the *work*, not the *presentation*)
+The strength of this thesis lies in its comprehensive survey of homomorphic encryption schemes and their applications to machine learning algorithms, providing a solid foundation for further research in this area. 
 
 ## Weaknesses
-(Please evaluate the *work*, not the *presentation*)
+The discussion on the practical limitations and the efficiency of these schemes highlights a significant area for improvement, indicating a need for further research to enhance the applicability of homomorphic encryption in practical machine learning tasks.
 
 ## Paper presentation
 
