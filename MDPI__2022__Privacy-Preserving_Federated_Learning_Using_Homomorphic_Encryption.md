@@ -22,10 +22,11 @@ The paper presents a performance analysis and evaluation of the PPFL algorithm a
 Identifies the challenge of key management in federated learning systems and proposes a novel approach to address this issue by allowing different encryption keys for different nodes.
 
 ## Strengths
-The strength lies in its innovative approach to enhancing privacy in federated learning through homomorphic encryption.
+ The paper addresses an important problem of data privacy in federated learning scenarios, and presents a novel technique that allows each client to use a different HE key in the same system. The paper also provides a theoretical analysis of the security, computation, and communication costs of the proposed algorithm, and shows experimental results to verify its feasibility and effectiveness.
 
 ## Weaknesses
-The paper might benefit from further exploration into the scalability of the proposed system and its impact on computational efficiency.
+The paper assumes that the key generation center, the cloud server, and the computation provider are trusted and honest, which may not be realistic in some scenarios. The paper also does not compare the proposed algorithm with other existing privacy-preserving federated learning methods, such as differential privacy or secure multiparty computation. The paper also does not discuss the impact of the proposed algorithm on the learning accuracy and convergence rate of the federated learning model.
+
 
 Totally unfeasible and inscalable.
 
@@ -36,7 +37,7 @@ Totally unfeasible and inscalable.
 (Please evaluate the paper presentation here. You can include both the good and the bad)
 
 ## Thoughts
-(Can you do better?)
+The paper could be improved by relaxing some of the assumptions on the trustworthiness of the system entities, and by providing more security analysis and proofs. The paper could also benefit from comparing the proposed algorithm with other state-of-the-art methods in terms of privacy, efficiency, and accuracy. The paper could also explore the trade-offs between the key size, the data length, and the homomorphic operations in the proposed algorithm.
 
 ## Takeaways and questions
 (What did you like/dislike about the paper? What did your learn?)
