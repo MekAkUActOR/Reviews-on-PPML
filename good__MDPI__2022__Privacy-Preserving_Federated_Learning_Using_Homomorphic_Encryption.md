@@ -56,3 +56,6 @@ The paper’s algorithm works as follows:
 By using this algorithm, the paper achieves the following advantages:
 - Stronger privacy protection: Each client uses a different HE key, so even if one client’s key is compromised, the other clients’ data are still secure. Moreover, the server and the provider cannot access the clients’ data or model parameters without their cooperation.
 - Higher flexibility: The clients can use different HE keys in the same system, so they do not need to agree on a common key or exchange keys with each other. This reduces the communication and coordination overhead.
+
+
+According to part 3.3 of the current paper, the homomorphic encryption scheme used is the Paillier cryptosystem (PCK) [19]. This scheme is an additive homomorphic encryption (AHE) scheme that allows performing addition operations on ciphertexts without decryption12. The paper proposes a privacy-preserving federated learning (PPFL) algorithm that uses a distributed homomorphic cryptosystem (DHC) based on the PCK scheme to protect the local and global model parameters3. The paper also describes the functions and procedures of the DHC in detail.
