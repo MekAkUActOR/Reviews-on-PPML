@@ -13,3 +13,6 @@
 
 - Pros: Very strong threat model. Agnostic secret key. No extra trusted entity. Consider differential privacy.
 - Cons: Complex crypto system and hard to implement for federated learning. High overhead and latency.
+
+## Promising direction
+Not explored field: implementing (multiparty) homomorphic encryption on online federated learning, a real IoT federated learning senerio. Can target on NDSS, S&P, USENIX Sec, CCS, TDSC, TIFS, IoT
