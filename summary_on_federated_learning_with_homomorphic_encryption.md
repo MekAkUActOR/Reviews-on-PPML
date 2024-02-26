@@ -16,3 +16,5 @@
 
 ## Promising direction
 Not explored field: implementing (multiparty) homomorphic encryption on online federated learning, a real IoT federated learning senerio. Can target on NDSS, S&P, USENIX Sec, CCS, TDSC, TIFS, IoT
+
+Can be an open=source benchmark or a tool with option for different security requirements.
