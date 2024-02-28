@@ -9,7 +9,7 @@
 - Cons: Weak threat model. Lower security guarantee because all clients share the private key (in reality it may not matter because despite the homomorphic encryption there must be another cryptosystem for communication.). Neglect the threaten from other clients.
 
 - Pros: Different private keys and consider differential privacy
-- Cons: Weak threat model. There are two extra trusted entities: the authority knows the intermediate model parameters with noise, and the central server knows the noise. May have high overhead
+- Cons: Weak threat model. There are two extra trusted entities: the authority knows the intermediate model parameters with noise, and the central server knows the noise, and they can cooperate to hack. May have high overhead. Neglect the threaten from other clients.
 
 - Pros: Very strong threat model. Agnostic secret key. No extra trusted entity. Consider differential privacy.
 - Cons: Complex crypto system and hard to implement for federated learning. High overhead and latency.
