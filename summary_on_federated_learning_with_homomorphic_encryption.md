@@ -3,6 +3,7 @@
 1. Common public key and private key, one central server for aggregation.
 2. Different public keys and private keys for different clients (each private key will be devided to two fragments), one central server for adding noise, one authority for aggregation.
 3. Common public key and private key (each client holds a fragment of the private key, and secret key and public key are generated collectively), one central server for aggregation and adding noise.
+4. MK-HE such as xMK-CKKS
 
 ## Pros & Cons
 - Pros: Simple scheme and easy to implement
@@ -18,3 +19,7 @@
 Not explored field: implementing (multiparty) homomorphic encryption on online federated learning, a real IoT federated learning senerio. Can target on NDSS, S&P, USENIX Sec, CCS, TDSC, TIFS, IoT
 
 Can be an open=source benchmark or a tool with option for different security requirements.
+
+And our task will be on IoT, so there must be a very large scale (hundreds of millions) number of client devices. So we should consider Federated Learning techs in large scale scenario (cross-device).
+
+How about hirarchical Federated Learning with cross-device in lower level and cross-silo in the high level? In cross-device level we use MHE or even naive HE , and in cross-silo level we use xMK-CKKS, MHE, or BatchCrypt?
