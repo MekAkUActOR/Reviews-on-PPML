@@ -39,3 +39,5 @@ The paper also has some limitations and possible directions for future work:
 ## Takeaways and questions
 (What did you like/dislike about the paper? What did your learn?)
 (Questions for discussion?)
+
+"We improve the MK‐CKKS protocol so that the server becomes only able to decrypt the aggregation of the shared encrypted model updates, thereby obfuscating the individual model updates with updates from all other remote participating devices."
